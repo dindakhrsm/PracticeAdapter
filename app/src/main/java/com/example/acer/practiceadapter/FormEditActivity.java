@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.acer.practiceadapter.com.example.acer.user.Student;
-import com.example.acer.practiceadapter.com.example.acer.user.StudentStatic;
+import com.example.acer.practiceadapter.com.example.acer.user.StudentList2;
 
 /**
  * Created by ACER on 22/10/2016.
@@ -68,8 +68,8 @@ public class FormEditActivity extends AppCompatActivity {
         String phone = phoneText.getText().toString();
         String mail = mailText.getText().toString();
         student = new Student(id, noreg, name, mail, phone);
-        StudentStatic studentStatic = StudentStatic.getInstance();
-        studentStatic.set(id, student);
+        StudentList2 studentList2 = StudentList2.getInstance();
+        studentList2.set(id, student);
         Toast success = Toast.makeText(getApplicationContext(), "Successfully Updated Student Data", Toast.LENGTH_SHORT);
         success.show();
         finish();
@@ -88,7 +88,7 @@ public class FormEditActivity extends AppCompatActivity {
             case R.id.delete_item:
                 Student object = getIntent().getParcelableExtra("StudentList");
                 int id = object.getId();
-                StudentStatic student_data = StudentStatic.getInstance();
+                StudentList2 student_data = StudentList2.getInstance();
                 student_data.remove(id);
                 finish();
                 return true;

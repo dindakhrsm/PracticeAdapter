@@ -6,24 +6,27 @@ import java.util.ArrayList;
  * Created by ACER on 21/10/2016.
  */
 
-public class StudentStatic {
+public class StudentList2 {
     private static ArrayList<Student> studentArrayList = new ArrayList<>();
-    private static StudentStatic instance = new StudentStatic();
+    private static StudentList2 instance = new StudentList2();
+
+
     public static ArrayList<Student> getStudentArrayList(){
         return studentArrayList;
     }
 
     public static void setStudentArrayList(ArrayList<Student> studentArrayList){
-        StudentStatic.studentArrayList = studentArrayList;
+        StudentList2.studentArrayList = studentArrayList;
     }
 
-    public static StudentStatic getInstance(){
+    public static StudentList2 getInstance(){
         return instance;
     }
 
-    public static void setInstance(StudentStatic instance){
-        StudentStatic.instance = instance;
+    public static void setInstance(StudentList2 instance){
+        StudentList2.instance = instance;
     }
+
     public void addStudent(Student student){
         studentArrayList.add(student);
     }

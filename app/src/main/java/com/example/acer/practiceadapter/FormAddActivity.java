@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.acer.practiceadapter.com.example.acer.user.Student;
-import com.example.acer.practiceadapter.com.example.acer.user.StudentStatic;
+import com.example.acer.practiceadapter.com.example.acer.user.StudentList2;
 
 /**
  * Created by ACER on 15/10/2016.
@@ -55,8 +55,8 @@ public class FormAddActivity extends AppCompatActivity {
 		String mail = mailText.getText().toString();
         String phone = phoneText.getText().toString();
         student = new Student(id, noreg, name, mail, phone);
-        StudentStatic studentStatic = StudentStatic.getInstance();
-        studentStatic.addStudent(student);
+        StudentList2 studentList2 = StudentList2.getInstance();
+        studentList2.addStudent(student);
         Toast success = Toast.makeText(getApplicationContext(), "Successfully Added New Student Data", Toast.LENGTH_SHORT);
         success.show();
         finish();

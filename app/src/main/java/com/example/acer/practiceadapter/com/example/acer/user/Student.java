@@ -17,8 +17,9 @@ public class Student implements Parcelable {
         this.id = id;
         this.noreg = noreg;
         this.name = name;
-        this.phone = phone;
         this.mail = mail;
+        this.phone = phone;
+
     }
 
 	public Student(Parcel in){

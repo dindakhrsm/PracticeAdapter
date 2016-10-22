@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.acer.practiceadapter.com.example.acer.adapter.StudentArrayAdapter;
 import com.example.acer.practiceadapter.com.example.acer.user.Student;
-import com.example.acer.practiceadapter.com.example.acer.user.StudentStatic;
+import com.example.acer.practiceadapter.com.example.acer.user.StudentList2;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ public class StudentActivity extends AppCompatActivity {
 	private static ArrayList<Student> studentArrayList;
     private ListView studentListView;
 	private TextView empty_view;
-	private StudentStatic studentStatic;
+	private StudentList2 studentList2;
 	
 
     @Override
@@ -37,7 +37,7 @@ public class StudentActivity extends AppCompatActivity {
         studentListView = (ListView)findViewById(R.id.list_item);
         empty_view = (TextView)findViewById(R.id.empty_view);
         studentListView.setEmptyView(empty_view);
-        studentStatic = StudentStatic.getInstance();
+        studentList2 = StudentList2.getInstance();
 
         //setlistener for floacting action button
         FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
@@ -53,7 +53,7 @@ public class StudentActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(), FormEditActivity.class);
-                Student student = studentStatic.get(position);
+                Student student = studentList2.get(position);
                 intent.putExtra("StudentList",student);
                 startActivity(intent);
             }
@@ -63,11 +63,11 @@ public class StudentActivity extends AppCompatActivity {
     @Override
     public void onResume(){
         super.onResume();
-        if(studentStatic.count()==0) {
+        if(studentList2.count()==0) {
             studentArrayAdapter = new StudentArrayAdapter(this, new ArrayList<Student>());
             empty_view.setText("No Student Found");
         } else{
-            studentArrayAdapter = new StudentArrayAdapter(this, studentStatic.getList());
+            studentArrayAdapter = new StudentArrayAdapter(this, studentList2.getList());
         }
         studentListView.setAdapter(studentArrayAdapter);
     }
@@ -78,8 +78,8 @@ public class StudentActivity extends AppCompatActivity {
         studentArrayList.add(new Student(2, "3145136203","Ghina Rosika Amalina","ghina@mhs.unj.ac.id","0812xxx"));
         studentArrayList.add(new Student(3, "3145136204","Dinda Kharisma","dinda@mhs.unj.ac.id","0896xxx"));
         studentArrayList.add(new Student(4, "3145136216","Rahmi Putri","putri@mhs.unj.ac.id","0857xxx"));
-        studentStatic.AddStudents(studentArrayList);
-        studentArrayAdapter = new StudentArrayAdapter(this,studentStatic.getList());
+        studentList2.AddStudents(studentArrayList);
+        studentArrayAdapter = new StudentArrayAdapter(this, studentList2.getList());
         studentListView.setAdapter(studentArrayAdapter);
     }
 
@@ -97,7 +97,7 @@ public class StudentActivity extends AppCompatActivity {
                 populateStudentList();
                 return true;
             case R.id.clear_list:
-                StudentStatic.getInstance().clearList();
+                StudentList2.getInstance().clearList();
                 studentArrayAdapter = new StudentArrayAdapter(this, new ArrayList<Student>());
                 studentListView.setAdapter(studentArrayAdapter);
                 return true;
