@@ -15,7 +15,7 @@ import com.example.acer.practiceadapter.com.example.acer.user.StudentList2;
  */
 public class FormAddActivity extends AppCompatActivity {
     //identify EditText field to enter data
-    private EditText idText, nameText, noregText, mailText, phoneText;
+    private EditText idText, noregText, nameText, mailText, phoneText;
     //identifier for content existing student
     private Student student;
 

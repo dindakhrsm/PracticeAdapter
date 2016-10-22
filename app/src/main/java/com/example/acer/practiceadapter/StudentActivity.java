@@ -77,10 +77,13 @@ public class StudentActivity extends AppCompatActivity {
 //methods for create_dummy on menu
     private void populateStudentList(){
         ArrayList<Student> studentArrayList = new ArrayList<>();
-        studentArrayList.add(new Student(1, "3145136192","Ummu Kultsum","ummu@mhs.unj.ac.id","0888xxx"));
-        studentArrayList.add(new Student(2, "3145136203","Ghina Rosika Amalina","ghina@mhs.unj.ac.id","0812xxx"));
-        studentArrayList.add(new Student(3, "3145136204","Dinda Kharisma","dinda@mhs.unj.ac.id","0896xxx"));
-        studentArrayList.add(new Student(4, "3145136216","Rahmi Putri","putri@mhs.unj.ac.id","0857xxx"));
+        studentArrayList.add(new Student(1, "3145136188","Tri Febriana Siami","tri@mhs.unj.ac.id","0896xxx"));
+        studentArrayList.add(new Student(2, "3145136192","Ummu Kultsum","ummu@mhs.unj.ac.id","0888xxx"));
+        studentArrayList.add(new Student(3, "3145136193","Hana Maulinda","hana@mhs.unj.ac.id","0812xxx"));
+        studentArrayList.add(new Student(4, "3145136194","Dian Rakasiwi","dian@mhs.unj.ac.id","0812xxx"));
+        studentArrayList.add(new Student(5, "3145136196","Mikael Yurubeli","mika@mhs.unj.ac.id","0856xxx"));
+        studentArrayList.add(new Student(6, "3145136197","Muhammad Fachrizal","ijal@mhs.unj.ac.id","0857xxx"));
+        studentArrayList.add(new Student(7, "3145136203","Ghina Rosika Amalina","ghina@mhs.unj.ac.id","0812xxx"));
         studentList2.AddStudents(studentArrayList);
         studentArrayAdapter = new StudentArrayAdapter(this, studentList2.getList());
         studentListView.setAdapter(studentArrayAdapter);

@@ -4,7 +4,7 @@
     <string name="teacher_list">List of Lecturers</string>
     <string name="firstpage_title">Click one of two selectable items below :</string>
     <!-- Title for the activity to add a new student [CHAR LIMIT=20] -->
-    <string name="editor_activity_title_new_student">Add new Student</string>
+    <string name="editor_activity_title_new_student">Add New Student</string>
     <!-- Title for the activity to edit student [CHAR LIMIT=20] -->
     <string name="editor_activity_title_edit_student">Edit Student</string>
     <!-- Label for overflow menu option that inserts fake student data into the app [CHAR LIMIT=20] -->
@@ -12,6 +12,7 @@
     <!-- Label for overflow menu option that deletes all student data in the app [CHAR LIMIT=20] -->
     <string name="action_delete_all_entries">Clear List</string>
     <string name="no_student_found">No Student Found</string>
+    <string name ="editor_activity_title_add_teacher">Add New Teacher</string>
 
 
     <!-- Label for editor menu option to save student and leave editor [CHAR LIMIT=20] -->
