@@ -12,6 +12,7 @@
     <!-- Label for overflow menu option that deletes all student data in the app [CHAR LIMIT=20] -->
     <string name="action_delete_all_entries">Clear List</string>
     <string name="no_student_found">No Student Found</string>
+    <string name="no_teacher_found">No Teacher Found</string>
     <string name ="editor_activity_title_add_teacher">Add New Teacher</string>
 
 

@@ -29,7 +29,7 @@ import java.util.ArrayList;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.list_view);
+            setContentView(R.layout.list_view_teacher);
             teacherListView = (ListView) findViewById(R.id.list_item);
             empty_view = (TextView) findViewById(R.id.empty_view);
             teacherListView.setEmptyView(empty_view);
