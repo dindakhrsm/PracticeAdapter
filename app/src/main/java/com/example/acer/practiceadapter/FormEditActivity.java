@@ -27,22 +27,20 @@ public class FormEditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
-
+    // Find all relevant views that we will need to read user input from
         idText = (EditText) findViewById(R.id.edit_id);
         noregText = (EditText) findViewById(R.id.edit_nim);
         nameText = (EditText) findViewById(R.id.edit_nama);
 		mailText = (EditText) findViewById(R.id.edit_email);
         phoneText = (EditText) findViewById(R.id.edit_phone);
-
-        //get parcel
+    //get list of data which will be edited
         Student object = getIntent().getParcelableExtra("StudentList");
-        //implements parcel
         idText.setText("" + object.getId());
         noregText.setText(object.getNoreg());
         nameText.setText(object.getName());
         phoneText.setText(object.getPhone());
         mailText.setText(object.getMail());
-
+        //setup FAB to save edited data and cancel
         FloatingActionButton saveButton = (FloatingActionButton) findViewById(R.id.saveActionButton);
         FloatingActionButton cancelButton = (FloatingActionButton) findViewById(R.id.cancelActionButton);
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +58,7 @@ public class FormEditActivity extends AppCompatActivity {
         });
 
     }
-
+//method to save edited data
     protected void saveUpdated(){
         int id = Integer.parseInt(idText.getText().toString());
         String noreg = noregText.getText().toString();
@@ -77,6 +75,8 @@ public class FormEditActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu options from the res/menu/menu_student_editor.xml file.
+        // This adds menu items to the app bar.
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_editor,menu);
         return true;
@@ -86,13 +86,12 @@ public class FormEditActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.delete_item:
-                Student object = getIntent().getParcelableExtra("StudentList");
-                int id = object.getId();
-                StudentList2 student_data = StudentList2.getInstance();
-                student_data.remove(id);
+                //not implemented yet
+                return true;
+            case R.id.home:
                 finish();
                 return true;
         }
-        return false;
+        return super.onOptionsItemSelected(item);
     }
 }

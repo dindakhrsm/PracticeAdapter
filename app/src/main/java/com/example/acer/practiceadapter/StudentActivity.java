@@ -34,17 +34,19 @@ public class StudentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
+        // Find the ListView which will be populated with the student data
         studentListView = (ListView)findViewById(R.id.list_item);
+        // Find and set empty view on the ListView, so that it only shows when the list has 0 items.
         empty_view = (TextView)findViewById(R.id.empty_view);
         studentListView.setEmptyView(empty_view);
+        //get instance from 'StudentList2' class
         studentList2 = StudentList2.getInstance();
 
-        //setlistener for floacting action button
+        // Setup FAB to open FormAddActivity
         FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //open Form Add Student
                 Intent intent = new Intent(getApplicationContext(), FormAddActivity.class);
                 startActivity(intent);
             }
@@ -63,6 +65,7 @@ public class StudentActivity extends AppCompatActivity {
     @Override
     public void onResume(){
         super.onResume();
+        //check condition of studentList2 instance, if it has no data, set text "No Student Found"
         if(studentList2.count()==0) {
             studentArrayAdapter = new StudentArrayAdapter(this, new ArrayList<Student>());
             empty_view.setText("No Student Found");
@@ -71,7 +74,7 @@ public class StudentActivity extends AppCompatActivity {
         }
         studentListView.setAdapter(studentArrayAdapter);
     }
-
+//methods for create_dummy on menu
     private void populateStudentList(){
         ArrayList<Student> studentArrayList = new ArrayList<>();
         studentArrayList.add(new Student(1, "3145136192","Ummu Kultsum","ummu@mhs.unj.ac.id","0888xxx"));
@@ -85,6 +88,8 @@ public class StudentActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
+        // Inflate the menu options from the res/menu/menu_student_list.xml file.
+        // This adds menu items to the app bar.
         MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_student_list, menu);
         return true;

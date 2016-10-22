@@ -14,8 +14,9 @@ import com.example.acer.practiceadapter.com.example.acer.user.StudentList2;
  * Created by ACER on 15/10/2016.
  */
 public class FormAddActivity extends AppCompatActivity {
-
+    //identify EditText field to enter data
     private EditText idText, nameText, noregText, mailText, phoneText;
+    //identifier for content existing student
     private Student student;
 
     @Override
@@ -23,17 +24,15 @@ public class FormAddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        //register all View
+        // Find all relevant views that we will need to read user input from
         idText = (EditText) findViewById(R.id.edit_id);
         nameText = (EditText) findViewById(R.id.edit_nama);
         noregText = (EditText) findViewById(R.id.edit_nim);
         mailText = (EditText) findViewById(R.id.edit_email);
         phoneText = (EditText) findViewById(R.id.edit_phone);
-        //register all fab
+        //setup FAB to save new data and cancel
         FloatingActionButton saveButton = (FloatingActionButton) findViewById(R.id.saveActionButton);
         FloatingActionButton cancelButton = (FloatingActionButton) findViewById(R.id.cancelActionButton);
-
-        //set fab listener
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +47,7 @@ public class FormAddActivity extends AppCompatActivity {
         });
     }
 
+    //method to save new data
 		protected void saveNewData(){
         int id = Integer.parseInt(idText.getText().toString());
         String noreg = noregText.getText().toString();
@@ -60,7 +60,5 @@ public class FormAddActivity extends AppCompatActivity {
         Toast success = Toast.makeText(getApplicationContext(), "Successfully Added New Student Data", Toast.LENGTH_SHORT);
         success.show();
         finish();
-      
-
     }
 }
