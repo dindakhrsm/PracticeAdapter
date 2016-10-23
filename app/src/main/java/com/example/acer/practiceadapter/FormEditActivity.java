@@ -84,6 +84,8 @@ public class FormEditActivity extends AppCompatActivity {
                 int id = object.getId();
                 StudentList2 removedstudent = StudentList2.getInstance();
                 removedstudent.remove(id-1);
+                Toast removedsuccess = Toast.makeText(getApplicationContext(), "Student Data has been deleted", Toast.LENGTH_SHORT);
+                removedsuccess.show();
                 finish();
                 return true;
             case R.id.home:
