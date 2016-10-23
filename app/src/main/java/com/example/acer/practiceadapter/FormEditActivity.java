@@ -61,6 +61,8 @@ public class FormEditActivity extends AppCompatActivity {
 //method to save edited data
     protected void saveUpdated(){
        //not implemented yet
+        Toast updated = Toast.makeText(getApplicationContext(), "Student Data has not changed yet", Toast.LENGTH_SHORT);
+        updated.show();
         finish();
     }
 
