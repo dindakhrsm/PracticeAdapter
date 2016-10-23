@@ -60,16 +60,7 @@ public class FormEditActivity extends AppCompatActivity {
     }
 //method to save edited data
     protected void saveUpdated(){
-        int id = Integer.parseInt(idText.getText().toString());
-        String noreg = noregText.getText().toString();
-        String name = nameText.getText().toString();
-        String phone = phoneText.getText().toString();
-        String mail = mailText.getText().toString();
-        student = new Student(id, noreg, name, mail, phone);
-        StudentList2 studentList2 = StudentList2.getInstance();
-        studentList2.set(id, student);
-        Toast success = Toast.makeText(getApplicationContext(), "Successfully Updated Student Data", Toast.LENGTH_SHORT);
-        success.show();
+       //not implemented yet
         finish();
     }
 
