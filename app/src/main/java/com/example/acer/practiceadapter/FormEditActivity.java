@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.acer.practiceadapter.com.example.acer.user.Student;
+import com.example.acer.practiceadapter.com.example.acer.user.StudentList2;
 
 
 /**
@@ -79,7 +80,11 @@ public class FormEditActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.delete_item:
-                //not implemented yet
+                Student object = getIntent().getParcelableExtra("StudentList");
+                int id = object.getId();
+                StudentList2 removedstudent = StudentList2.getInstance();
+                removedstudent.remove(id-1);
+                finish();
                 return true;
             case R.id.home:
                 finish();
