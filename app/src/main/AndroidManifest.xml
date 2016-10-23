@@ -63,7 +63,17 @@
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StudentActivity"/>
+                android:value=".TeacherActivity"/>
+        </activity>
+
+        <activity
+            android:name=".FormEditTeacherActivity"
+            android:label="@string/editor_activity_title_edit_teacher"
+            android:parentActivityName=".TeacherActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TeacherActivity"/>
         </activity>
 
     </application>

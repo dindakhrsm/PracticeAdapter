@@ -14,6 +14,7 @@
     <string name="no_student_found">No Student Found</string>
     <string name="no_teacher_found">No Teacher Found</string>
     <string name ="editor_activity_title_add_teacher">Add New Teacher</string>
+    <string name="editor_activity_title_edit_teacher">Edit Teacher</string>
 
 
     <!-- Label for editor menu option to save student and leave editor [CHAR LIMIT=20] -->

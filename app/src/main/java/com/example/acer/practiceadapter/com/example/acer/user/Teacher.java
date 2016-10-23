@@ -10,8 +10,9 @@ public class Teacher implements Parcelable {
     private int id;
     private String nip;
     private String name;
-    private String phone;
     private String mail;
+    private String phone;
+
 
 public Teacher(int id, String nip, String name, String mail, String phone) {
         this.id = id;

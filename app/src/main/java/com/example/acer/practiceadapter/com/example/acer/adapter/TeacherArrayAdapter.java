@@ -33,8 +33,9 @@ public class TeacherArrayAdapter extends ArrayAdapter<Teacher> {
         TextView idView = (TextView) view.findViewById(R.id.teacher_id);
         TextView nipView = (TextView) view.findViewById(R.id.teacher_nip);
         TextView nameView = (TextView) view.findViewById(R.id.teacher_name);
-        TextView phoneView = (TextView) view.findViewById(R.id.teacher_email);
-        TextView mailView = (TextView) view.findViewById(R.id.teacher_phone);
+        TextView mailView = (TextView) view.findViewById(R.id.teacher_email);
+        TextView phoneView = (TextView) view.findViewById(R.id.teacher_phone);
+
 
         //set content
         idView.setText(teacher.getId() + "");

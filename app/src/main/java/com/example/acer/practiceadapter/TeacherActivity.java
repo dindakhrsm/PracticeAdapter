@@ -68,11 +68,11 @@ import java.util.ArrayList;
 
         private void populateTeacherList() {
             ArrayList<Teacher> teacherArrayList = new ArrayList<>();
-                teacherArrayList.add(new Teacher(1, "196002111987032001", "Fariani Hermin", "0818xxxxxx", "fariani-hermin@unj.ac.id"));
-                teacherArrayList.add(new Teacher(2, "196605171994031003", "Mulyono", "0813xxxxxx", "mulyono@unj.ac.id"));
-                teacherArrayList.add(new Teacher(3, "197509252002122002", "Ratna Widyati", "0858xxxxxx", "ratna-widyati@unj.ac.id"));
-                teacherArrayList.add(new Teacher(4, "197511212005012004", "Ria Arafiyah", "0856xxxxxx", "ria-arafiyah@unj.ac.id"));
-                teacherArrayList.add(new Teacher(5, "197706152003121001", "Med Irzal", "0813xxxxxx", "med-irzal@unj.ac.id"));
+                teacherArrayList.add(new Teacher(1, "196002111987032001", "Fariani Hermin", "fariani-hermin@unj.ac.id","0812xxx"));
+                teacherArrayList.add(new Teacher(2, "196605171994031003", "Mulyono", "mulyono@unj.ac.id","0822xxx"));
+                teacherArrayList.add(new Teacher(3, "197509252002122002", "Ratna Widyati", "ratna-widyati@unj.ac.id","0856xxx"));
+                teacherArrayList.add(new Teacher(4, "197511212005012004", "Ria Arafiyah", "ria-arafiyah@unj.ac.id","0812xxx"));
+                teacherArrayList.add(new Teacher(5, "197706152003121001", "Med Irzal", "med-irzal@unj.ac.id","0813xxx"));
                 teacherList.AddTeachers(teacherArrayList);
                 teacherArrayAdapter = new TeacherArrayAdapter(this, teacherList.getList());
                 teacherListView.setAdapter(teacherArrayAdapter);
