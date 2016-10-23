@@ -20,9 +20,8 @@ import com.example.acer.practiceadapter.com.example.acer.user.Student;
 
 public class FormEditActivity extends AppCompatActivity {
 
+    //initialize EditText field
     private EditText idText, noregText, nameText, mailText, phoneText;
-    private Student student;
-    private int id = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
